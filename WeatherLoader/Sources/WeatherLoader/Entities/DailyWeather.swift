@@ -34,13 +34,17 @@ struct DailyWeather: Decodable {
     /// Description of weather
     let weather: [Conditions]
     
-    /// Wind speed. Unit: meter/sec
+    /// Wind speed
+    ///
+    /// Unit Default: meter/sec, Metric: meter/sec, Imperial: miles/hour
     let speed: Double
     
     /// Wind direction, degrees (meteorological)
     let deg: Int
     
-    /// Wind gust. Unit: meter/sec
+    /// Wind gust
+    ///
+    /// Unit Default: meter/sec, Metric: meter/sec, Imperial: miles/hour.
     let gust: Double
     
     /// Cloudiness, %

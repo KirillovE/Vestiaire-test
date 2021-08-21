@@ -8,6 +8,8 @@
 import Foundation
 
 /// Various temperature data
+///
+/// Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit
 struct Temperature: Decodable {
     
     /// Min daily temperature. Unit: Celsius
