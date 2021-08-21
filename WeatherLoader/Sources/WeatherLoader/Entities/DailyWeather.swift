@@ -50,7 +50,7 @@ struct DailyWeather: Decodable {
     let pop: Double
     
     /// Precipitation volume, mm
-    let rain: Double
+    let rain: Double?
     
     /// Snow volume, mm
     let snow: Double?
