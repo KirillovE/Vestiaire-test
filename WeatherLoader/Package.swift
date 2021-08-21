@@ -17,8 +17,7 @@ let package = Package(
         ),
         .testTarget(
             name: "WeatherLoaderTests",
-            dependencies: ["WeatherLoader"],
-            resources: [.process("APIResponse.json")]
+            dependencies: ["WeatherLoader"]
         )
     ]
 )
