@@ -22,6 +22,7 @@
 		7ACD955C26D1178500A98134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ACD955F26D1178500A98134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7ACD956126D1178500A98134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7ACD956726D134DF00A98134 /* WeatherLoader */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WeatherLoader; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +39,7 @@
 		7ACD954726D1178400A98134 = {
 			isa = PBXGroup;
 			children = (
+				7ACD956726D134DF00A98134 /* WeatherLoader */,
 				7ACD955226D1178400A98134 /* Vestiaire test */,
 				7ACD955126D1178400A98134 /* Products */,
 			);
