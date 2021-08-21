@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7ACD955426D1178400A98134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD955326D1178400A98134 /* AppDelegate.swift */; };
-		7ACD955626D1178400A98134 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD955526D1178400A98134 /* SceneDelegate.swift */; };
 		7ACD955826D1178400A98134 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD955726D1178400A98134 /* ViewController.swift */; };
 		7ACD955B26D1178400A98134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ACD955926D1178400A98134 /* Main.storyboard */; };
 		7ACD955D26D1178500A98134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ACD955C26D1178500A98134 /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		7ACD955026D1178400A98134 /* Vestiaire test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vestiaire test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACD955326D1178400A98134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7ACD955526D1178400A98134 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7ACD955726D1178400A98134 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7ACD955A26D1178400A98134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7ACD955C26D1178500A98134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				7ACD955326D1178400A98134 /* AppDelegate.swift */,
-				7ACD955526D1178400A98134 /* SceneDelegate.swift */,
 				7ACD955726D1178400A98134 /* ViewController.swift */,
 				7ACD955926D1178400A98134 /* Main.storyboard */,
 				7ACD955C26D1178500A98134 /* Assets.xcassets */,
@@ -139,7 +136,6 @@
 			files = (
 				7ACD955826D1178400A98134 /* ViewController.swift in Sources */,
 				7ACD955426D1178400A98134 /* AppDelegate.swift in Sources */,
-				7ACD955626D1178400A98134 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +285,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y8DV57JN42;
 				INFOPLIST_FILE = "Vestiaire test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +293,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.triada.Vestiaire-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,6 +305,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y8DV57JN42;
 				INFOPLIST_FILE = "Vestiaire test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +313,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.triada.Vestiaire-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
