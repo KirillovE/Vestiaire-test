@@ -41,7 +41,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="XOW-Jt-diS">
-                                                    <rect key="frame" x="271.5" y="16" width="53" height="53"/>
+                                                    <rect key="frame" x="274" y="16" width="53" height="53"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="XOW-Jt-diS" secondAttribute="height" id="fxj-Ps-daJ"/>
                                                     </constraints>
@@ -70,7 +70,7 @@
                                                 <constraint firstItem="d4M-3Q-cRr" firstAttribute="firstBaseline" secondItem="rec-y8-pP8" secondAttribute="firstBaseline" id="Zc0-aS-iyw"/>
                                                 <constraint firstItem="AYx-zh-bl9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XOW-Jt-diS" secondAttribute="trailing" constant="8" symbolic="YES" id="bX3-aR-3Iz"/>
                                                 <constraint firstItem="XOW-Jt-diS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="u5B-WK-Xn9" secondAttribute="trailing" constant="16" id="gI0-ZL-Umf"/>
-                                                <constraint firstItem="d4M-3Q-cRr" firstAttribute="leading" secondItem="XOW-Jt-diS" secondAttribute="trailing" constant="16" id="gae-Nw-1BO"/>
+                                                <constraint firstItem="d4M-3Q-cRr" firstAttribute="leading" secondItem="XOW-Jt-diS" secondAttribute="centerX" constant="40" id="gae-Nw-1BO"/>
                                                 <constraint firstItem="XOW-Jt-diS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rec-y8-pP8" secondAttribute="trailing" constant="16" id="tgv-B5-uxt"/>
                                                 <constraint firstItem="XOW-Jt-diS" firstAttribute="top" secondItem="HH4-Ja-fLN" secondAttribute="top" constant="16" id="uzC-zy-p3y"/>
                                                 <constraint firstAttribute="bottom" secondItem="XOW-Jt-diS" secondAttribute="bottom" constant="16" id="zy4-n2-uLs"/>

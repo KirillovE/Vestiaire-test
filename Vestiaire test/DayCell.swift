@@ -19,8 +19,8 @@ final class DayCell: UITableViewCell {
         weakdayLabel.text = summmary.weakday
         dateLabel.text = summmary.date
         weatherIconImageView.image = UIImage(named: summmary.conditionsIconName)
-        maxTemperatureLabel.text = "\(summmary.maxTemperature)"
-        minTemperatureLabel.text = "\(summmary.minTemperature)"
+        maxTemperatureLabel.text = "\(summmary.maxTemperature)º"
+        minTemperatureLabel.text = "\(summmary.minTemperature)º"
     }
 
 }
