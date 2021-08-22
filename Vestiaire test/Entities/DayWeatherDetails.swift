@@ -20,6 +20,7 @@ struct DayWeatherDetails {
     let conditionDescription: String
     
     let temperature: Temperature
+    
     let feelsLike: Temperature
 }
 

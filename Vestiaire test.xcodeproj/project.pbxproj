@@ -13,6 +13,7 @@
 		7A17476926D28AB400948613 /* RandomEntityGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17476826D28AB400948613 /* RandomEntityGenerator.swift */; };
 		7A17476B26D290EF00948613 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17476A26D290EF00948613 /* DayCell.swift */; };
 		7A17477126D2B58A00948613 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17477026D2B58A00948613 /* Temperature.swift */; };
+		7A17477326D2B8C300948613 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17477226D2B8C300948613 /* DetailsViewController.swift */; };
 		7ACD955426D1178400A98134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD955326D1178400A98134 /* AppDelegate.swift */; };
 		7ACD955826D1178400A98134 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD955726D1178400A98134 /* ListViewController.swift */; };
 		7ACD955B26D1178400A98134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ACD955926D1178400A98134 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		7A17476826D28AB400948613 /* RandomEntityGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomEntityGenerator.swift; sourceTree = "<group>"; };
 		7A17476A26D290EF00948613 /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
 		7A17477026D2B58A00948613 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		7A17477226D2B8C300948613 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		7ACD955026D1178400A98134 /* Vestiaire test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vestiaire test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACD955326D1178400A98134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7ACD955726D1178400A98134 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -51,12 +53,30 @@
 		7A17476726D2898900948613 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				7A17476826D28AB400948613 /* RandomEntityGenerator.swift */,
 				7A17476126D281B900948613 /* GeneralDailyWeather.swift */,
 				7A17476526D2896200948613 /* DayWeatherDetails.swift */,
 				7A17477026D2B58A00948613 /* Temperature.swift */,
 				7A17476326D2894100948613 /* DayWeatherSummary.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		7A17477426D2B8FD00948613 /* DailyForecast */ = {
+			isa = PBXGroup;
+			children = (
+				7ACD955726D1178400A98134 /* ListViewController.swift */,
+				7A17476A26D290EF00948613 /* DayCell.swift */,
+			);
+			path = DailyForecast;
+			sourceTree = "<group>";
+		};
+		7A17477526D2B91500948613 /* DetailedForecast */ = {
+			isa = PBXGroup;
+			children = (
+				7A17477226D2B8C300948613 /* DetailsViewController.swift */,
+			);
+			path = DetailedForecast;
 			sourceTree = "<group>";
 		};
 		7ACD954726D1178400A98134 = {
@@ -80,14 +100,13 @@
 			isa = PBXGroup;
 			children = (
 				7ACD955326D1178400A98134 /* AppDelegate.swift */,
-				7ACD955726D1178400A98134 /* ListViewController.swift */,
-				7A17476A26D290EF00948613 /* DayCell.swift */,
 				7ACD955926D1178400A98134 /* Main.storyboard */,
-				7ACD955C26D1178500A98134 /* Assets.xcassets */,
-				7ACD955E26D1178500A98134 /* LaunchScreen.storyboard */,
-				7ACD956126D1178500A98134 /* Info.plist */,
+				7A17477426D2B8FD00948613 /* DailyForecast */,
+				7A17477526D2B91500948613 /* DetailedForecast */,
 				7A17476726D2898900948613 /* Entities */,
-				7A17476826D28AB400948613 /* RandomEntityGenerator.swift */,
+				7ACD955C26D1178500A98134 /* Assets.xcassets */,
+				7ACD956126D1178500A98134 /* Info.plist */,
+				7ACD955E26D1178500A98134 /* LaunchScreen.storyboard */,
 			);
 			path = "Vestiaire test";
 			sourceTree = "<group>";
@@ -164,6 +183,7 @@
 			files = (
 				7ACD955826D1178400A98134 /* ListViewController.swift in Sources */,
 				7A17476226D281B900948613 /* GeneralDailyWeather.swift in Sources */,
+				7A17477326D2B8C300948613 /* DetailsViewController.swift in Sources */,
 				7A17477126D2B58A00948613 /* Temperature.swift in Sources */,
 				7A17476626D2896200948613 /* DayWeatherDetails.swift in Sources */,
 				7A17476926D28AB400948613 /* RandomEntityGenerator.swift in Sources */,
