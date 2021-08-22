@@ -1,5 +1,5 @@
 //
-//  TextualError.swift
+//  WeatherLoader.swift
 //
 //
 //  Created by Евгений Кириллов on 21.08.2021.
@@ -11,7 +11,7 @@ import Foundation
 struct WeatherLoader {
     
     /// Response of forecast network request
-    typealias ForecastResponse = (Result<WeatherFields, TextualError>) -> ()
+    typealias ForecastResponse = (Result<WeatherFields, WeatherError>) -> ()
     
     /// Identifier associated with your application
     let appID: String
@@ -47,8 +47,7 @@ extension WeatherLoader {
         completion: @escaping ForecastResponse
     ) {
         guard let url = formURL(days, city) else {
-            let errorFormingRequest: TextualError = "Failed to form request"
-            completion(.failure(errorFormingRequest))
+            completion(.failure("Failed to form request"))
             return
         }
         
@@ -75,7 +74,7 @@ extension WeatherLoader {
     private func formTask(_ url: URL, _ completion: @escaping ForecastResponse) -> URLSessionDataTask {
         session.dataTask(with: url) { data, response, error in
             if let error = error {
-                let responseError = TextualError(stringLiteral: error.localizedDescription)
+                let responseError = WeatherError(stringLiteral: error.localizedDescription)
                 completion(.failure(responseError))
                 return
             }
@@ -84,7 +83,7 @@ extension WeatherLoader {
                 let httpResponse = response as? HTTPURLResponse,
                 (200...299).contains(httpResponse.statusCode)
             else {
-                let serverError = TextualError(description: response.debugDescription)
+                let serverError = WeatherError(description: response.debugDescription)
                 completion(.failure(serverError))
                 return
             }
@@ -94,8 +93,7 @@ extension WeatherLoader {
                 mimeType == "application/json",
                 let data = data
             else {
-                let responseError: TextualError = "Invalid response format"
-                completion(.failure(responseError))
+                completion(.failure("Invalid response format"))
                 return
             }
             
@@ -103,7 +101,7 @@ extension WeatherLoader {
                 let weather = try decoder.decode(WeatherFields.self, from: data)
                 completion(.success(weather))
             } catch let decodingError {
-                let decodingErrorText = TextualError(description: decodingError.localizedDescription)
+                let decodingErrorText = WeatherError(description: decodingError.localizedDescription)
                 completion(.failure(decodingErrorText))
             }
         }
