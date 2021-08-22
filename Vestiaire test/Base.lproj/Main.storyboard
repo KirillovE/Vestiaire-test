@@ -82,6 +82,7 @@
                                             <outlet property="minTemperatureLabel" destination="AYx-zh-bl9" id="b2a-he-T5Z"/>
                                             <outlet property="weakdayLabel" destination="rec-y8-pP8" id="TqE-zW-PtB"/>
                                             <outlet property="weatherIconImageView" destination="XOW-Jt-diS" id="8W2-U3-HbU"/>
+                                            <segue destination="VIL-r1-Ehq" kind="show" id="Gcx-Sb-HOt"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -105,6 +106,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1050.7246376811595" y="138.61607142857142"/>
+        </scene>
+        <!--Detailed forecast-->
+        <scene sceneID="ruv-A7-84U">
+            <objects>
+                <viewController id="VIL-r1-Ehq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yn5-uK-fjH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u6c-wJ-Lzd">
+                                <rect key="frame" x="0.0" y="140" width="414" height="756"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SeE-0T-IGC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="u6c-wJ-Lzd" firstAttribute="top" secondItem="SeE-0T-IGC" secondAttribute="top" id="4XP-WC-wI8"/>
+                            <constraint firstItem="u6c-wJ-Lzd" firstAttribute="leading" secondItem="SeE-0T-IGC" secondAttribute="leading" id="YpO-uy-CAq"/>
+                            <constraint firstAttribute="bottom" secondItem="u6c-wJ-Lzd" secondAttribute="bottom" id="ezW-10-RNW"/>
+                            <constraint firstItem="SeE-0T-IGC" firstAttribute="trailing" secondItem="u6c-wJ-Lzd" secondAttribute="trailing" id="iXc-rh-I0r"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detailed forecast" id="VzD-md-bNI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2FV-eG-wqR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1959" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xFg-rV-t9k">

@@ -17,6 +17,7 @@ final class ListViewController: UIViewController {
         
         title = weatherData.cityName + ", " + weatherData.countryName
         weatherTable.dataSource = self
+        weatherTable.delegate = self
     }
     
 }
@@ -36,4 +37,12 @@ extension ListViewController: UITableViewDataSource {
         return cell
     }
     
+}
+
+extension ListViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
 }
