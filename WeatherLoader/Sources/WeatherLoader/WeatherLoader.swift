@@ -8,10 +8,10 @@
 import Foundation
 
 /// An object that handles requests to OpenWeather API
-struct WeatherLoader {
+public struct WeatherLoader {
     
     /// Response of forecast network request
-    typealias ForecastResponse = (Result<WeatherFields, WeatherError>) -> ()
+    public typealias ForecastResponse = (Result<WeatherFields, WeatherError>) -> ()
     
     /// Identifier associated with your application
     let appID: String
@@ -41,7 +41,7 @@ extension WeatherLoader {
     ///   - city: City name
     ///   - days: A number of days, which will be returned in the API response (from 1 to 16)
     ///   - completion: Closure containing loaded forecast or error
-    func loadDailyForecast(
+    public func loadDailyForecast(
         for city: String,
         in days: Int,
         completion: @escaping ForecastResponse

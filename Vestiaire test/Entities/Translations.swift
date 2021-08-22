@@ -37,7 +37,7 @@ struct Translations {
         )
     }
     
-    func getWeatherSummary(from dailyWeather: [DailyWeather]) -> [DayWeatherSummary] {
+    private func getWeatherSummary(from dailyWeather: [DailyWeather]) -> [DayWeatherSummary] {
         dailyWeather.map { weather in
             let date = Date(timeIntervalSince1970: TimeInterval(weather.dt))
             return DayWeatherSummary(
@@ -51,7 +51,7 @@ struct Translations {
         }
     }
     
-    func getWeatherDetails(weather: DailyWeather) -> DayWeatherDetails {
+    private func getWeatherDetails(weather: DailyWeather) -> DayWeatherDetails {
         let date = Date(timeIntervalSince1970: TimeInterval(weather.dt))
         let sunriseDate = Date(timeIntervalSince1970: TimeInterval(weather.sunrise))
         let sunsetDate = Date(timeIntervalSince1970: TimeInterval(weather.sunset))
@@ -70,7 +70,7 @@ struct Translations {
         )
     }
     
-    func getTemperature(from apiTemperature: WeatherLoader.Temperature) -> Temperature {
+    private func getTemperature(from apiTemperature: WeatherLoader.Temperature) -> Temperature {
         .init(
             morning: Int(apiTemperature.morn),
             day: Int(apiTemperature.day),
