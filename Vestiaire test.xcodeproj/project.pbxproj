@@ -12,6 +12,7 @@
 		7A17476426D2894100948613 /* DayWeatherSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17476326D2894100948613 /* DayWeatherSummary.swift */; };
 		7A17476626D2896200948613 /* DayWeatherDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17476526D2896200948613 /* DayWeatherDetails.swift */; };
 		7A17476926D28AB400948613 /* RandomEntityGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17476826D28AB400948613 /* RandomEntityGenerator.swift */; };
+		7A17476B26D290EF00948613 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17476A26D290EF00948613 /* DayCell.swift */; };
 		7ACD955426D1178400A98134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD955326D1178400A98134 /* AppDelegate.swift */; };
 		7ACD955826D1178400A98134 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD955726D1178400A98134 /* ListViewController.swift */; };
 		7ACD955B26D1178400A98134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ACD955926D1178400A98134 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		7A17476326D2894100948613 /* DayWeatherSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeatherSummary.swift; sourceTree = "<group>"; };
 		7A17476526D2896200948613 /* DayWeatherDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeatherDetails.swift; sourceTree = "<group>"; };
 		7A17476826D28AB400948613 /* RandomEntityGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomEntityGenerator.swift; sourceTree = "<group>"; };
+		7A17476A26D290EF00948613 /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
 		7ACD955026D1178400A98134 /* Vestiaire test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vestiaire test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACD955326D1178400A98134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7ACD955726D1178400A98134 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				7ACD955326D1178400A98134 /* AppDelegate.swift */,
 				7ACD955726D1178400A98134 /* ListViewController.swift */,
+				7A17476A26D290EF00948613 /* DayCell.swift */,
 				7ACD955926D1178400A98134 /* Main.storyboard */,
 				7ACDAD7026D25A9100A98134 /* DayCellContent.xib */,
 				7A17475B26D26A9000948613 /* DayCellContent.swift */,
@@ -169,6 +172,7 @@
 				7A17475C26D26A9000948613 /* DayCellContent.swift in Sources */,
 				7A17476926D28AB400948613 /* RandomEntityGenerator.swift in Sources */,
 				7A17476426D2894100948613 /* DayWeatherSummary.swift in Sources */,
+				7A17476B26D290EF00948613 /* DayCell.swift in Sources */,
 				7ACD955426D1178400A98134 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,8 +17,11 @@ struct DayWeatherSummary {
     /// Minimum temperature at specific day
     let minTemperature: Double
     
-    /// Information to represent specific day
-    let dateInfo: Int
+    /// Day of the weak with this weather info
+    let weakday: String
+    
+    /// Date representation
+    let date: String
     
     /// More details about weather
     let details: DayWeatherDetails
@@ -27,10 +30,11 @@ struct DayWeatherSummary {
 extension DayWeatherSummary: RandomEntityGenerator {
     static var random: DayWeatherSummary {
         .init(
-            conditionsIconName: "",
+            conditionsIconName: ["01d", "09n", "50d"].randomElement()!,
             maxTemperature: .random(in: 0...40),
             minTemperature: .random(in: -40...0),
-            dateInfo: .random(in: 0...1_929_658_434),
+            weakday: "Saturday",
+            date: "25 july 2021",
             details: .random
         )
     }
