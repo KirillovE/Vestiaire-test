@@ -11,6 +11,9 @@ final class NetworkingTests: XCTestCase {
         )
         let url = loader.formURL(1, "Paris")
         XCTAssertNotNil(url)
+        XCTAssertEqual(url!.scheme, "https")
+        XCTAssertEqual(url!.host, "api.openweathermap.org")
+        XCTAssertEqual(url!.path, "/data/2.5/forecast/daily")
         
         let queryParameters = getQueryParameters(of: url!)
         XCTAssertEqual(queryParameters["q"], "Paris")
