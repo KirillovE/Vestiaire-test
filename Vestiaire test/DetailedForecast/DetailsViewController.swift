@@ -7,8 +7,9 @@
 
 import UIKit
 
-final class DetailsViewController: UIViewController {
+final class DetailsViewController: UITableViewController {
     
+    @IBOutlet weak var detailsTableView: UITableView!
     var weatherDetails: DayWeatherDetails?
 
     override func viewDidLoad() {
