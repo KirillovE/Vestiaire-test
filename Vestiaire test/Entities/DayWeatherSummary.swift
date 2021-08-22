@@ -12,10 +12,10 @@ struct DayWeatherSummary {
     let conditionsIconName: String
     
     /// Maximum temperature at specific day
-    let maxTemperature: Double
+    let maxTemperature: Int
     
     /// Minimum temperature at specific day
-    let minTemperature: Double
+    let minTemperature: Int
     
     /// Day of the weak with this weather info
     let weakday: String

@@ -21,13 +21,68 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DayCell" rowHeight="260" id="pxS-5Y-2Yg" customClass="DayCell" customModule="Vestiaire_test" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="260"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DayCell" rowHeight="85" id="pxS-5Y-2Yg" customClass="DayCell" customModule="Vestiaire_test" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pxS-5Y-2Yg" id="HH4-Ja-fLN" customClass="DayCellContent" customModule="Vestiaire_test" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pxS-5Y-2Yg" id="HH4-Ja-fLN">
+                                            <rect key="frame" x="0.0" y="0.0" width="384.5" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32º" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4M-3Q-cRr">
+                                                    <rect key="frame" x="340.5" y="16" width="24" height="17"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23º" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYx-zh-bl9">
+                                                    <rect key="frame" x="344.5" y="54.5" width="20" height="14.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="XOW-Jt-diS">
+                                                    <rect key="frame" x="271.5" y="16" width="53" height="53"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="XOW-Jt-diS" secondAttribute="height" id="fxj-Ps-daJ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21 august 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5B-WK-Xn9">
+                                                    <rect key="frame" x="20" y="54.5" width="86" height="14.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rec-y8-pP8">
+                                                    <rect key="frame" x="20" y="16" width="61" height="17"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="u5B-WK-Xn9" firstAttribute="bottom" secondItem="XOW-Jt-diS" secondAttribute="bottom" id="2AH-v1-LLo"/>
+                                                <constraint firstAttribute="trailing" secondItem="d4M-3Q-cRr" secondAttribute="trailing" constant="20" id="5Kc-8p-bUJ"/>
+                                                <constraint firstItem="rec-y8-pP8" firstAttribute="top" secondItem="XOW-Jt-diS" secondAttribute="top" id="6aU-yD-L2H"/>
+                                                <constraint firstItem="rec-y8-pP8" firstAttribute="leading" secondItem="HH4-Ja-fLN" secondAttribute="leading" constant="20" id="6pw-F5-xdR"/>
+                                                <constraint firstAttribute="trailing" secondItem="AYx-zh-bl9" secondAttribute="trailing" constant="20" id="ICZ-Ue-5Bx"/>
+                                                <constraint firstItem="u5B-WK-Xn9" firstAttribute="leading" secondItem="rec-y8-pP8" secondAttribute="leading" id="Tco-sQ-3MX"/>
+                                                <constraint firstItem="AYx-zh-bl9" firstAttribute="firstBaseline" secondItem="u5B-WK-Xn9" secondAttribute="firstBaseline" id="VaZ-67-FXf"/>
+                                                <constraint firstItem="d4M-3Q-cRr" firstAttribute="firstBaseline" secondItem="rec-y8-pP8" secondAttribute="firstBaseline" id="Zc0-aS-iyw"/>
+                                                <constraint firstItem="AYx-zh-bl9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XOW-Jt-diS" secondAttribute="trailing" constant="8" symbolic="YES" id="bX3-aR-3Iz"/>
+                                                <constraint firstItem="XOW-Jt-diS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="u5B-WK-Xn9" secondAttribute="trailing" constant="16" id="gI0-ZL-Umf"/>
+                                                <constraint firstItem="d4M-3Q-cRr" firstAttribute="leading" secondItem="XOW-Jt-diS" secondAttribute="trailing" constant="16" id="gae-Nw-1BO"/>
+                                                <constraint firstItem="XOW-Jt-diS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rec-y8-pP8" secondAttribute="trailing" constant="16" id="tgv-B5-uxt"/>
+                                                <constraint firstItem="XOW-Jt-diS" firstAttribute="top" secondItem="HH4-Ja-fLN" secondAttribute="top" constant="16" id="uzC-zy-p3y"/>
+                                                <constraint firstAttribute="bottom" secondItem="XOW-Jt-diS" secondAttribute="bottom" constant="16" id="zy4-n2-uLs"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="u5B-WK-Xn9" id="yyA-qE-G8b"/>
+                                            <outlet property="maxTemperatureLabel" destination="d4M-3Q-cRr" id="6ug-7Y-ULS"/>
+                                            <outlet property="minTemperatureLabel" destination="AYx-zh-bl9" id="b2a-he-T5Z"/>
+                                            <outlet property="weakdayLabel" destination="rec-y8-pP8" id="TqE-zW-PtB"/>
+                                            <outlet property="weatherIconImageView" destination="XOW-Jt-diS" id="8W2-U3-HbU"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -71,6 +126,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="placeholder" width="278" height="242"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

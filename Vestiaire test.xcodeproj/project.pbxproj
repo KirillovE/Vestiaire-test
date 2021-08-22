@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A17475C26D26A9000948613 /* DayCellContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17475B26D26A9000948613 /* DayCellContent.swift */; };
 		7A17476226D281B900948613 /* GeneralDailyWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17476126D281B900948613 /* GeneralDailyWeather.swift */; };
 		7A17476426D2894100948613 /* DayWeatherSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17476326D2894100948613 /* DayWeatherSummary.swift */; };
 		7A17476626D2896200948613 /* DayWeatherDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17476526D2896200948613 /* DayWeatherDetails.swift */; };
@@ -18,11 +17,9 @@
 		7ACD955B26D1178400A98134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ACD955926D1178400A98134 /* Main.storyboard */; };
 		7ACD955D26D1178500A98134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ACD955C26D1178500A98134 /* Assets.xcassets */; };
 		7ACD956026D1178500A98134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ACD955E26D1178500A98134 /* LaunchScreen.storyboard */; };
-		7ACDAD7126D25A9100A98134 /* DayCellContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ACDAD7026D25A9100A98134 /* DayCellContent.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7A17475B26D26A9000948613 /* DayCellContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellContent.swift; sourceTree = "<group>"; };
 		7A17476126D281B900948613 /* GeneralDailyWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralDailyWeather.swift; sourceTree = "<group>"; };
 		7A17476326D2894100948613 /* DayWeatherSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeatherSummary.swift; sourceTree = "<group>"; };
 		7A17476526D2896200948613 /* DayWeatherDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeatherDetails.swift; sourceTree = "<group>"; };
@@ -36,7 +33,6 @@
 		7ACD955F26D1178500A98134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7ACD956126D1178500A98134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7ACD956726D134DF00A98134 /* WeatherLoader */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WeatherLoader; sourceTree = "<group>"; };
-		7ACDAD7026D25A9100A98134 /* DayCellContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayCellContent.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +80,6 @@
 				7ACD955726D1178400A98134 /* ListViewController.swift */,
 				7A17476A26D290EF00948613 /* DayCell.swift */,
 				7ACD955926D1178400A98134 /* Main.storyboard */,
-				7ACDAD7026D25A9100A98134 /* DayCellContent.xib */,
-				7A17475B26D26A9000948613 /* DayCellContent.swift */,
 				7ACD955C26D1178500A98134 /* Assets.xcassets */,
 				7ACD955E26D1178500A98134 /* LaunchScreen.storyboard */,
 				7ACD956126D1178500A98134 /* Info.plist */,
@@ -154,7 +148,6 @@
 			files = (
 				7ACD956026D1178500A98134 /* LaunchScreen.storyboard in Resources */,
 				7ACD955D26D1178500A98134 /* Assets.xcassets in Resources */,
-				7ACDAD7126D25A9100A98134 /* DayCellContent.xib in Resources */,
 				7ACD955B26D1178400A98134 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,7 +162,6 @@
 				7ACD955826D1178400A98134 /* ListViewController.swift in Sources */,
 				7A17476226D281B900948613 /* GeneralDailyWeather.swift in Sources */,
 				7A17476626D2896200948613 /* DayWeatherDetails.swift in Sources */,
-				7A17475C26D26A9000948613 /* DayCellContent.swift in Sources */,
 				7A17476926D28AB400948613 /* RandomEntityGenerator.swift in Sources */,
 				7A17476426D2894100948613 /* DayWeatherSummary.swift in Sources */,
 				7A17476B26D290EF00948613 /* DayCell.swift in Sources */,
