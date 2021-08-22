@@ -1,3 +1,10 @@
+//
+//  TextualError.swift
+//
+//
+//  Created by Евгений Кириллов on 21.08.2021.
+//
+
 import Foundation
 
 /// An object that handles requests to OpenWeather API
