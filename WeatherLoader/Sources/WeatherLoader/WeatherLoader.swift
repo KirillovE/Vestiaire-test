@@ -55,7 +55,7 @@ extension WeatherLoader {
         formTask(url, completion).resume()
     }
     
-    private func formURL(_ days: Int, _ city: String) -> URL? {
+    func formURL(_ days: Int, _ city: String) -> URL? {
         let normalizationRange = 1...16
         let normalizedCount = max(min(days, normalizationRange.upperBound), normalizationRange.lowerBound)
         
