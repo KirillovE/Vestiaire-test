@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		7A17477126D2B58A00948613 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17477026D2B58A00948613 /* Temperature.swift */; };
 		7A17477326D2B8C300948613 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17477226D2B8C300948613 /* DetailsViewController.swift */; };
 		7A17477726D2C00900948613 /* DetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17477626D2C00900948613 /* DetailRow.swift */; };
+		7A17478626D2D7A000948613 /* Translations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17478526D2D7A000948613 /* Translations.swift */; };
+		7A17478926D2D7A800948613 /* WeatherLoader in Frameworks */ = {isa = PBXBuildFile; productRef = 7A17478826D2D7A800948613 /* WeatherLoader */; };
 		7ACD955426D1178400A98134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD955326D1178400A98134 /* AppDelegate.swift */; };
 		7ACD955826D1178400A98134 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD955726D1178400A98134 /* ListViewController.swift */; };
 		7ACD955B26D1178400A98134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ACD955926D1178400A98134 /* Main.storyboard */; };
@@ -31,6 +33,7 @@
 		7A17477026D2B58A00948613 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
 		7A17477226D2B8C300948613 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		7A17477626D2C00900948613 /* DetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRow.swift; sourceTree = "<group>"; };
+		7A17478526D2D7A000948613 /* Translations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Translations.swift; sourceTree = "<group>"; };
 		7ACD955026D1178400A98134 /* Vestiaire test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vestiaire test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACD955326D1178400A98134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7ACD955726D1178400A98134 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A17478926D2D7A800948613 /* WeatherLoader in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +64,7 @@
 				7A17476526D2896200948613 /* DayWeatherDetails.swift */,
 				7A17477026D2B58A00948613 /* Temperature.swift */,
 				7A17476326D2894100948613 /* DayWeatherSummary.swift */,
+				7A17478526D2D7A000948613 /* Translations.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -82,12 +87,20 @@
 			path = DetailedForecast;
 			sourceTree = "<group>";
 		};
+		7A17478726D2D7A800948613 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7ACD954726D1178400A98134 = {
 			isa = PBXGroup;
 			children = (
 				7ACD956726D134DF00A98134 /* WeatherLoader */,
 				7ACD955226D1178400A98134 /* Vestiaire test */,
 				7ACD955126D1178400A98134 /* Products */,
+				7A17478726D2D7A800948613 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +143,9 @@
 			dependencies = (
 			);
 			name = "Vestiaire test";
+			packageProductDependencies = (
+				7A17478826D2D7A800948613 /* WeatherLoader */,
+			);
 			productName = "Vestiaire test";
 			productReference = 7ACD955026D1178400A98134 /* Vestiaire test.app */;
 			productType = "com.apple.product-type.application";
@@ -188,6 +204,7 @@
 				7A17476226D281B900948613 /* GeneralDailyWeather.swift in Sources */,
 				7A17477326D2B8C300948613 /* DetailsViewController.swift in Sources */,
 				7A17477126D2B58A00948613 /* Temperature.swift in Sources */,
+				7A17478626D2D7A000948613 /* Translations.swift in Sources */,
 				7A17476626D2896200948613 /* DayWeatherDetails.swift in Sources */,
 				7A17476926D28AB400948613 /* RandomEntityGenerator.swift in Sources */,
 				7A17476426D2894100948613 /* DayWeatherSummary.swift in Sources */,
@@ -397,6 +414,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7A17478826D2D7A800948613 /* WeatherLoader */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WeatherLoader;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7ACD954826D1178400A98134 /* Project object */;
 }
