@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A17475C26D26A9000948613 /* DayCellContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17475B26D26A9000948613 /* DayCellContent.swift */; };
 		7ACD955426D1178400A98134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD955326D1178400A98134 /* AppDelegate.swift */; };
 		7ACD955826D1178400A98134 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD955726D1178400A98134 /* ViewController.swift */; };
 		7ACD955B26D1178400A98134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ACD955926D1178400A98134 /* Main.storyboard */; };
 		7ACD955D26D1178500A98134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ACD955C26D1178500A98134 /* Assets.xcassets */; };
 		7ACD956026D1178500A98134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ACD955E26D1178500A98134 /* LaunchScreen.storyboard */; };
+		7ACDAD7126D25A9100A98134 /* DayCellContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ACDAD7026D25A9100A98134 /* DayCellContent.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A17475B26D26A9000948613 /* DayCellContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellContent.swift; sourceTree = "<group>"; };
 		7ACD955026D1178400A98134 /* Vestiaire test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vestiaire test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACD955326D1178400A98134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7ACD955726D1178400A98134 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,6 +26,7 @@
 		7ACD955F26D1178500A98134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7ACD956126D1178500A98134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7ACD956726D134DF00A98134 /* WeatherLoader */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WeatherLoader; sourceTree = "<group>"; };
+		7ACDAD7026D25A9100A98134 /* DayCellContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayCellContent.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				7ACD955326D1178400A98134 /* AppDelegate.swift */,
 				7ACD955726D1178400A98134 /* ViewController.swift */,
 				7ACD955926D1178400A98134 /* Main.storyboard */,
+				7ACDAD7026D25A9100A98134 /* DayCellContent.xib */,
+				7A17475B26D26A9000948613 /* DayCellContent.swift */,
 				7ACD955C26D1178500A98134 /* Assets.xcassets */,
 				7ACD955E26D1178500A98134 /* LaunchScreen.storyboard */,
 				7ACD956126D1178500A98134 /* Info.plist */,
@@ -125,6 +131,7 @@
 			files = (
 				7ACD956026D1178500A98134 /* LaunchScreen.storyboard in Resources */,
 				7ACD955D26D1178500A98134 /* Assets.xcassets in Resources */,
+				7ACDAD7126D25A9100A98134 /* DayCellContent.xib in Resources */,
 				7ACD955B26D1178400A98134 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ACD955826D1178400A98134 /* ViewController.swift in Sources */,
+				7A17475C26D26A9000948613 /* DayCellContent.swift in Sources */,
 				7ACD955426D1178400A98134 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,7 +295,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y8DV57JN42;
 				INFOPLIST_FILE = "Vestiaire test/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +315,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y8DV57JN42;
 				INFOPLIST_FILE = "Vestiaire test/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
