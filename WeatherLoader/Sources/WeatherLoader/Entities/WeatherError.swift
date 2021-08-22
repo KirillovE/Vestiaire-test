@@ -6,13 +6,13 @@
 //
 
 /// API error representation
-struct WeatherError: Error, CustomStringConvertible {
-    let description: String
+public struct WeatherError: Error, CustomStringConvertible {
+    public let description: String
 }
 
 extension WeatherError: ExpressibleByStringLiteral {
     
-    init(stringLiteral value: String) {
+    public init(stringLiteral value: String) {
         description = value
     }
 }

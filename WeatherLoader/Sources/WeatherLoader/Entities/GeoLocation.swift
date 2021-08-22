@@ -8,11 +8,11 @@
 import Foundation
 
 /// Geo location of some point
-struct GeoLocation: Decodable {
+public struct GeoLocation: Decodable {
     
     /// Geo location, longitude
-    let lon: Double
+    public let lon: Double
     
     /// Geo location, latitude
-    let lat: Double
+    public let lat: Double
 }

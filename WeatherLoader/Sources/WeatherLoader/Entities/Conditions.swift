@@ -8,17 +8,17 @@
 import Foundation
 
 /// Weather condion descriptions
-struct Conditions: Decodable {
+public struct Conditions: Decodable {
     
     /// Weather condition id
-    let id: Int
+    public let id: Int
     
     /// Group of weather parameters (Rain, Snow, Extreme etc.)
-    let main: String
+    public let main: String
     
     /// Weather condition within the group
-    let description: String
+    public let description: String
     
     /// Weather icon id
-    let icon: String
+    public let icon: String
 }

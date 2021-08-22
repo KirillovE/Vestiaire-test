@@ -8,14 +8,14 @@
 import Foundation
 
 /// Fields in API response
-struct WeatherFields: Decodable {
+public struct WeatherFields: Decodable {
     
     /// City of forecast
-    let city: City
+    public let city: City
     
     /// A number of days returned in the API response
-    let cnt: Int
+    public let cnt: Int
     
     /// List of daily weather forecast
-    let list: [DailyWeather]
+    public let list: [DailyWeather]
 }

@@ -8,20 +8,20 @@
 import Foundation
 
 /// Parameters of specific city including name, coordinates, etc
-struct City: Decodable {
+public struct City: Decodable {
     
     /// City ID
-    let id: Int
+    public let id: Int
     
     /// City name
-    let name: String
+    public let name: String
     
     /// City geo location
-    let coord: GeoLocation
+    public let coord: GeoLocation
     
     /// Country code (GB, JP etc.)
-    let country: String
+    public let country: String
     
     /// Shift in seconds from UTC
-    let timezone: Int
+    public let timezone: Int
 }

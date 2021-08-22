@@ -10,23 +10,23 @@ import Foundation
 /// Various temperature data
 ///
 /// Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit
-struct Temperature: Decodable {
+public struct Temperature: Decodable {
     
     /// Min daily temperature. Unit: Celsius
-    let min: Double?
+    public let min: Double?
     
     /// Max daily temperature. Unit: Celsius
-    let max: Double?
+    public let max: Double?
     
     /// Morning temperature. Unit: Celsius
-    let morn: Double
+    public let morn: Double
     
     /// Day temperature. Unit: Celsius
-    let day: Double
+    public let day: Double
     
     /// Evening temperature. Unit: Celsius
-    let eve: Double
+    public let eve: Double
     
     /// Night temperature. Unit: Celsius
-    let night: Double
+    public let night: Double
 }

@@ -8,54 +8,54 @@
 import Foundation
 
 /// Weather parameters in specific day
-struct DailyWeather: Decodable {
+public struct DailyWeather: Decodable {
     
     /// Time of data forecasted
-    let dt: Int
+    public let dt: Int
     
     /// Time of sunrise
-    let sunrise: Int
+    public let sunrise: Int
     
     /// Time of sunset
-    let sunset: Int
+    public let sunset: Int
     
     /// Temperature during the day
-    let temp: Temperature
+    public let temp: Temperature
     
     /// Human perception of weather
-    let feelsLike: Temperature
+    public let feelsLike: Temperature
     
     /// Atmospheric pressure on the sea level, hPa
-    let pressure: Int
+    public let pressure: Int
     
     /// Humidity, %
-    let humidity: Int
+    public let humidity: Int
     
     /// Description of weather
-    let weather: [Conditions]
+    public let weather: [Conditions]
     
     /// Wind speed
     ///
     /// Unit Default: meter/sec, Metric: meter/sec, Imperial: miles/hour
-    let speed: Double
+    public let speed: Double
     
     /// Wind direction, degrees (meteorological)
-    let deg: Int
+    public let deg: Int
     
     /// Wind gust
     ///
     /// Unit Default: meter/sec, Metric: meter/sec, Imperial: miles/hour.
-    let gust: Double
+    public let gust: Double
     
     /// Cloudiness, %
-    let clouds: Int
+    public let clouds: Int
     
     /// Probability of precipitation
-    let pop: Double
+    public let pop: Double
     
     /// Precipitation volume, mm
-    let rain: Double?
+    public let rain: Double?
     
     /// Snow volume, mm
-    let snow: Double?
+    public let snow: Double?
 }
