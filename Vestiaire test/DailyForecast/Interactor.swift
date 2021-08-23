@@ -13,8 +13,12 @@ struct Interactor {
     private let loader: Loader
     private let translator = EntityTranslator()
     private let weatherRepresenter: WeatherRepresenter
+    private let errorRepresenter: ErrorRepresenter
     
-    init(weatherRepresenter: WeatherRepresenter) {
+    init(
+        weatherRepresenter: WeatherRepresenter,
+        errorRepresenter: ErrorRepresenter
+    ) {
         guard
             let path = Bundle.main.path(forResource: "Info", ofType: "plist"),
             let info = NSDictionary(contentsOfFile: path) as? [String: AnyObject],
@@ -25,6 +29,7 @@ struct Interactor {
         
         self.loader = Loader(appID: apiKey, mode: .json, units: .metric)
         self.weatherRepresenter = weatherRepresenter
+        self.errorRepresenter = errorRepresenter
     }
     
     func loadWeather() {
@@ -34,7 +39,8 @@ struct Interactor {
                 let presentableForecast = translator.getGeneralWeather(from: forecast)
                 weatherRepresenter.showWeather(presentableForecast)
             case .failure(let error):
-                print(error)
+                let errorText = String(describing: error)
+                errorRepresenter.showError(errorText)
             }
         }
     }

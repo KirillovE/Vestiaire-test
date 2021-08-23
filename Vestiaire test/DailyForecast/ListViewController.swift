@@ -20,7 +20,7 @@ final class ListViewController: UIViewController {
         weatherTable.dataSource = self
         weatherTable.delegate = self
         
-        interactor = Interactor(weatherRepresenter: self)
+        interactor = Interactor(weatherRepresenter: self, errorRepresenter: self)
         interactor?.loadWeather()
     }
     
@@ -61,6 +61,20 @@ extension ListViewController: WeatherRepresenter {
         weatherData = weather
         DispatchQueue.main.async {
             self.weatherTable.reloadData()
+        }
+    }
+}
+
+extension ListViewController: ErrorRepresenter {
+    func showError(_ error: String) {
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(
+                title: "Error",
+                message: error,
+                preferredStyle: .alert
+            )
+            alertController.addAction(UIAlertAction(title: "Close", style: .cancel))
+            self.present(alertController, animated: true)
         }
     }
 }
