@@ -11,7 +11,7 @@ final class ListViewController: UIViewController {
     
     @IBOutlet weak var weatherTable: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    private var weatherData: GeneralDailyWeather? // = .random
+    private var weatherData: GeneralDailyWeather? // = .random // you can uncomment this assignement for testing purpose
     private var interactor: Interactor?
     
     override func viewDidLoad() {
