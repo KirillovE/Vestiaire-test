@@ -67,6 +67,8 @@ private extension EntityTranslator {
         let sunriseDate = Date(timeIntervalSince1970: TimeInterval(weather.sunrise))
         let sunsetDate = Date(timeIntervalSince1970: TimeInterval(weather.sunset))
         return .init(
+            conditionIconName: weather.weather.first?.icon ?? "",
+            conditionDescription: weather.weather.first?.description ?? "",
             date: dateFormatter.string(from: date),
             sunriseTime: timeFormatter.string(from: sunriseDate),
             sunsetTime: timeFormatter.string(from: sunsetDate),
@@ -74,8 +76,6 @@ private extension EntityTranslator {
             precipitationProbability: Int(weather.pop),
             windSpeed: Int(weather.speed),
             cloudiness: weather.clouds,
-            conditionIconName: weather.weather.first?.icon ?? "",
-            conditionDescription: weather.weather.first?.description ?? "",
             temperature: getTemperature(from: weather.temp),
             feelsLike: getTemperature(from: weather.feelsLike)
         )
