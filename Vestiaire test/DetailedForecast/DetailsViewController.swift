@@ -42,35 +42,35 @@ extension DetailsViewController {
             cell.imageView?.image = UIImage(named: details.conditionIconName)
             cell.textLabel?.text = details.conditionDescription
         case .date:
-            cell.textLabel?.text = details.date
+            cell.textLabel?.text = "Weather at \(details.date)"
         case .sunrise:
-            cell.textLabel?.text = details.sunriseTime
+            cell.textLabel?.text = "Sun rises at \(details.sunriseTime)"
         case .sunset:
-            cell.textLabel?.text = details.sunsetTime
+            cell.textLabel?.text = "Sun sets at \(details.sunsetTime)"
         case .morning:
-            cell.detailTextLabel?.text = "\(details.temperature.morning)º"
+            cell.textLabel?.text = "\(details.temperature.morning)º at morning"
         case .day:
-            cell.detailTextLabel?.text = "\(details.temperature.day)º"
+            cell.textLabel?.text = "\(details.temperature.day)º at day"
         case .evening:
-            cell.detailTextLabel?.text = "\(details.temperature.evening)º"
+            cell.textLabel?.text = "\(details.temperature.evening)º at evening"
         case .night:
-            cell.detailTextLabel?.text = "\(details.temperature.night)º"
+            cell.textLabel?.text = "\(details.temperature.night)º at night"
         case .morningFeels:
-            cell.detailTextLabel?.text = "\(details.feelsLike.morning)º"
+            cell.textLabel?.text = "\(details.feelsLike.morning)º at morning"
         case .dayFeels:
-            cell.detailTextLabel?.text = "\(details.feelsLike.day)º"
+            cell.textLabel?.text = "\(details.feelsLike.day)º at day"
         case .eveningFeels:
-            cell.detailTextLabel?.text = "\(details.feelsLike.evening)º"
+            cell.textLabel?.text = "\(details.feelsLike.evening)º at evening"
         case .nightFeels:
-            cell.detailTextLabel?.text = "\(details.feelsLike.night)º"
+            cell.textLabel?.text = "\(details.feelsLike.night)º at night"
         case .wind:
-            cell.detailTextLabel?.text = "\(details.windSpeed) m/sec"
+            cell.textLabel?.text = "Wind speed: \(details.windSpeed) m/sec"
         case .clouds:
-            cell.detailTextLabel?.text = "\(details.cloudiness) %"
+            cell.textLabel?.text = "Cloudiness: \(details.cloudiness) %"
         case .humidity:
-            cell.detailTextLabel?.text = "\(details.humidity) %"
+            cell.textLabel?.text = "Humidity: \(details.humidity) %"
         case .pop:
-            cell.detailTextLabel?.text = "\(details.precipitationProbability) %"
+            cell.textLabel?.text = "Probality of percipitation: \(details.precipitationProbability) %"
         }
         
         return cell
