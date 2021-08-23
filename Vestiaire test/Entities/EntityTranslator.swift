@@ -1,5 +1,5 @@
 //
-//  Translations.swift
+//  EntityTranslator.swift
 //  Vestiaire test
 //
 //  Created by Евгений Кириллов on 22.08.2021.
@@ -8,7 +8,8 @@
 import Foundation
 import WeatherLoader
 
-struct Translations {
+struct EntityTranslator {
+    
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .long
@@ -37,8 +38,11 @@ struct Translations {
             daySummaries: getWeatherSummary(from: apiWeather.list)
         )
     }
+}
+
+private extension EntityTranslator {
     
-    private func getWeatherSummary(from dailyWeather: [DailyWeather]) -> [DayWeatherSummary] {
+    func getWeatherSummary(from dailyWeather: [DailyWeather]) -> [DayWeatherSummary] {
         dailyWeather.map { weather in
             let date = Date(timeIntervalSince1970: TimeInterval(weather.dt))
             return DayWeatherSummary(
@@ -52,7 +56,7 @@ struct Translations {
         }
     }
     
-    private func getWeatherDetails(weather: DailyWeather) -> DayWeatherDetails {
+    func getWeatherDetails(weather: DailyWeather) -> DayWeatherDetails {
         let date = Date(timeIntervalSince1970: TimeInterval(weather.dt))
         let sunriseDate = Date(timeIntervalSince1970: TimeInterval(weather.sunrise))
         let sunsetDate = Date(timeIntervalSince1970: TimeInterval(weather.sunset))
@@ -71,7 +75,7 @@ struct Translations {
         )
     }
     
-    private func getTemperature(from apiTemperature: WeatherLoader.Temperature) -> Temperature {
+    func getTemperature(from apiTemperature: WeatherLoader.Temperature) -> Temperature {
         .init(
             morning: Int(apiTemperature.morn),
             day: Int(apiTemperature.day),
@@ -79,4 +83,5 @@ struct Translations {
             night: Int(apiTemperature.night)
         )
     }
+    
 }

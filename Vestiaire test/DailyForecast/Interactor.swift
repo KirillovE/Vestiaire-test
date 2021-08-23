@@ -9,9 +9,12 @@ import Foundation
 import WeatherLoader
 
 struct Interactor {
-    private let loader: Loader
     
-    init() {
+    private let loader: Loader
+    private let translator = EntityTranslator()
+    private let weatherRepresenter: WeatherRepresenter
+    
+    init(weatherRepresenter: WeatherRepresenter) {
         guard
             let path = Bundle.main.path(forResource: "Info", ofType: "plist"),
             let info = NSDictionary(contentsOfFile: path) as? [String: AnyObject],
@@ -21,13 +24,15 @@ struct Interactor {
         }
         
         self.loader = Loader(appID: apiKey, mode: .json, units: .metric)
+        self.weatherRepresenter = weatherRepresenter
     }
     
     func loadWeather() {
         loader.loadDailyForecast(for: "Paris", in: 16) { loadedResult in
             switch loadedResult {
             case .success(let forecast):
-                print(forecast)
+                let presentableForecast = translator.getGeneralWeather(from: forecast)
+                weatherRepresenter.showWeather(presentableForecast)
             case .failure(let error):
                 print(error)
             }

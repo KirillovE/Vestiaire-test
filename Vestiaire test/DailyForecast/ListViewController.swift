@@ -10,17 +10,18 @@ import UIKit
 final class ListViewController: UIViewController {
     
     @IBOutlet weak var weatherTable: UITableView!
-    let weatherData: GeneralDailyWeather = .random
-    let interactor = Interactor()
+    private var weatherData: GeneralDailyWeather? = .random
+    private var interactor: Interactor?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = weatherData.cityName + ", " + weatherData.countryName
+        title = weatherData.map { $0.cityName + ", " + $0.countryName }
         weatherTable.dataSource = self
         weatherTable.delegate = self
         
-        interactor.loadWeather()
+        interactor = Interactor(weatherRepresenter: self)
+        interactor?.loadWeather()
     }
     
 }
@@ -28,28 +29,38 @@ final class ListViewController: UIViewController {
 extension ListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        "\(weatherData.daysCount)-days forecast"
+        weatherData.map { "\($0.daysCount)-days forecast" }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        weatherData.daySummaries.count
+        weatherData?.daySummaries.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DayCell", for: indexPath) as? DayCell else {
+        guard
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DayCell", for: indexPath) as? DayCell,
+            let weatherSummary = weatherData?.daySummaries[indexPath.row]
+        else {
             return UITableViewCell()
         }
         
-        cell.configure(with: weatherData.daySummaries[indexPath.row])
+        cell.configure(with: weatherSummary)
         return cell
     }
     
 }
 
 extension ListViewController: UITableViewDelegate {
-
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+}
 
+extension ListViewController: WeatherRepresenter {
+    func showWeather(_ weather: GeneralDailyWeather) {
+        weatherData = weather
+        DispatchQueue.main.async {
+            self.weatherTable.reloadData()
+        }
+    }
 }
