@@ -4,7 +4,7 @@ import XCTest
 final class NetworkingTests: XCTestCase {
     
     func testFormURL() {
-        let loader = WeatherLoader(
+        let loader = Loader(
             appID: "vestiaire",
             mode: .json,
             units: .metric
@@ -24,7 +24,7 @@ final class NetworkingTests: XCTestCase {
     }
     
     func testCountNormalizationGreater() {
-        let loader = WeatherLoader(
+        let loader = Loader(
             appID: "vestiaire",
             mode: .json,
             units: .metric
@@ -36,7 +36,7 @@ final class NetworkingTests: XCTestCase {
     }
     
     func testCountNormalizationLess() {
-        let loader = WeatherLoader(
+        let loader = Loader(
             appID: "vestiaire",
             mode: .json,
             units: .metric

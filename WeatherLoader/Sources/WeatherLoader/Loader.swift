@@ -1,5 +1,5 @@
 //
-//  WeatherLoader.swift
+//  Loader.swift
 //
 //
 //  Created by Евгений Кириллов on 21.08.2021.
@@ -8,19 +8,19 @@
 import Foundation
 
 /// An object that handles requests to OpenWeather API
-public struct WeatherLoader {
+public struct Loader {
     
     /// Response of forecast network request
     public typealias ForecastResponse = (Result<WeatherFields, WeatherError>) -> ()
     
     /// Identifier associated with your application
-    let appID: String
+    public let appID: String
     
     /// Data format
-    let mode: Mode
+    public let mode: Mode
     
     /// Units of measurement
-    let units: Units
+    public let units: Units
     
     private let endpoint = "https://api.openweathermap.org/data/2.5/forecast/daily"
     private let session = URLSession.shared
@@ -29,10 +29,22 @@ public struct WeatherLoader {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         return decoder
     }()
+    
+    /// Generate a new instanse explicitly setting properties
+    /// - Parameters:
+    ///   - appID: Identifier associated with your application
+    ///   - mode: Data format
+    ///   - units: Units of measurement
+    public init(appID: String, mode: Loader.Mode, units: Loader.Units) {
+        self.appID = appID
+        self.mode = mode
+        self.units = units
+    }
+    
 }
 
 // MARK: - Data transfer
-extension WeatherLoader {
+extension Loader {
     
     /// Load daily forecast from the server
     ///
@@ -110,7 +122,7 @@ extension WeatherLoader {
 }
 
 // MARK: - Auxiliary types
-extension WeatherLoader {
+public extension Loader {
     
     /// Data format
     ///
