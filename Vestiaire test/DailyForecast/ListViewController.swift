@@ -11,6 +11,7 @@ final class ListViewController: UIViewController {
     
     @IBOutlet weak var weatherTable: UITableView!
     let weatherData: GeneralDailyWeather = .random
+    let interactor = Interactor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,8 @@ final class ListViewController: UIViewController {
         title = weatherData.cityName + ", " + weatherData.countryName
         weatherTable.dataSource = self
         weatherTable.delegate = self
+        
+        interactor.loadWeather()
     }
     
 }
