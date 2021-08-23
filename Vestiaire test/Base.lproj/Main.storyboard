@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -87,12 +88,19 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
+                            <activityIndicatorView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="37U-xo-8wk">
+                                <rect key="frame" x="188.5" y="456.5" width="37" height="37"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <color key="color" name="AccentColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dAv-Lq-Kqw" secondAttribute="trailing" id="7pe-4F-zKX"/>
+                            <constraint firstItem="37U-xo-8wk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BNe-ZA-jaM"/>
                             <constraint firstItem="dAv-Lq-Kqw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ESg-x2-Ebp"/>
+                            <constraint firstItem="37U-xo-8wk" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Y1Y-9k-0Nm"/>
                             <constraint firstItem="dAv-Lq-Kqw" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="fv3-cd-iqc"/>
                             <constraint firstItem="dAv-Lq-Kqw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oJQ-Ew-b8I"/>
                         </constraints>
@@ -101,6 +109,7 @@
                         <barButtonItem key="backBarButtonItem" title="Daily forecast" id="iI0-Dc-W1B"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="37U-xo-8wk" id="LSB-Fs-NCA"/>
                         <outlet property="weatherTable" destination="dAv-Lq-Kqw" id="qUz-eh-qAH"/>
                     </connections>
                 </viewController>
@@ -537,6 +546,12 @@
         <image name="placeholder" width="278" height="242"/>
         <image name="sunrise.fill" catalog="system" width="128" height="97"/>
         <image name="sunset.fill" catalog="system" width="128" height="97"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.58399999141693115" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

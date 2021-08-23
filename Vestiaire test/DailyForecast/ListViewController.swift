@@ -10,7 +10,8 @@ import UIKit
 final class ListViewController: UIViewController {
     
     @IBOutlet weak var weatherTable: UITableView!
-    private var weatherData: GeneralDailyWeather? = .random
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    private var weatherData: GeneralDailyWeather?
     private var interactor: Interactor?
     
     override func viewDidLoad() {
@@ -22,6 +23,7 @@ final class ListViewController: UIViewController {
         
         interactor = Interactor(weatherRepresenter: self, errorRepresenter: self)
         interactor?.loadWeather()
+        activityIndicator.startAnimating()
     }
     
 }
@@ -60,6 +62,7 @@ extension ListViewController: WeatherRepresenter {
     func showWeather(_ weather: GeneralDailyWeather) {
         weatherData = weather
         DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
             self.weatherTable.reloadData()
         }
     }

@@ -19,6 +19,7 @@
 		7A17478926D2D7A800948613 /* WeatherLoader in Frameworks */ = {isa = PBXBuildFile; productRef = 7A17478826D2D7A800948613 /* WeatherLoader */; };
 		7A17478B26D2E07B00948613 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17478A26D2E07B00948613 /* Interactor.swift */; };
 		7AC1EE0A26D3FD0A00DAB9E5 /* WeatherRepresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1EE0926D3FD0900DAB9E5 /* WeatherRepresenter.swift */; };
+		7AC1EE0C26D4013800DAB9E5 /* ErrorRepresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1EE0B26D4013800DAB9E5 /* ErrorRepresenter.swift */; };
 		7ACD955426D1178400A98134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD955326D1178400A98134 /* AppDelegate.swift */; };
 		7ACD955826D1178400A98134 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD955726D1178400A98134 /* ListViewController.swift */; };
 		7ACD955B26D1178400A98134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ACD955926D1178400A98134 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 		7A17478526D2D7A000948613 /* EntityTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityTranslator.swift; sourceTree = "<group>"; };
 		7A17478A26D2E07B00948613 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		7AC1EE0926D3FD0900DAB9E5 /* WeatherRepresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepresenter.swift; sourceTree = "<group>"; };
+		7AC1EE0B26D4013800DAB9E5 /* ErrorRepresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorRepresenter.swift; sourceTree = "<group>"; };
 		7ACD955026D1178400A98134 /* Vestiaire test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vestiaire test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACD955326D1178400A98134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7ACD955726D1178400A98134 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			children = (
 				7ACD955726D1178400A98134 /* ListViewController.swift */,
 				7AC1EE0926D3FD0900DAB9E5 /* WeatherRepresenter.swift */,
+				7AC1EE0B26D4013800DAB9E5 /* ErrorRepresenter.swift */,
 				7A17476A26D290EF00948613 /* DayCell.swift */,
 				7A17478A26D2E07B00948613 /* Interactor.swift */,
 			);
@@ -212,6 +215,7 @@
 				7A17477126D2B58A00948613 /* Temperature.swift in Sources */,
 				7A17478626D2D7A000948613 /* EntityTranslator.swift in Sources */,
 				7AC1EE0A26D3FD0A00DAB9E5 /* WeatherRepresenter.swift in Sources */,
+				7AC1EE0C26D4013800DAB9E5 /* ErrorRepresenter.swift in Sources */,
 				7A17476626D2896200948613 /* DayWeatherDetails.swift in Sources */,
 				7A17478B26D2E07B00948613 /* Interactor.swift in Sources */,
 				7A17476926D28AB400948613 /* RandomEntityGenerator.swift in Sources */,
