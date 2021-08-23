@@ -17,13 +17,16 @@ final class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = weatherData.map { $0.cityName + ", " + $0.countryName }
         weatherTable.dataSource = self
         weatherTable.delegate = self
         
         interactor = Interactor(weatherRepresenter: self, errorRepresenter: self)
         interactor?.loadWeather()
         activityIndicator.startAnimating()
+    }
+    
+    private func seetTitle() {
+        title = weatherData.map { $0.cityName + ", " + $0.countryName }
     }
     
 }
@@ -70,6 +73,7 @@ extension ListViewController: WeatherRepresenter {
                 self.weatherTable.insertRows(at: insertionsIndexPaths, with: .automatic)
             } completion: { _ in
                 self.weatherTable.reloadData()
+                self.seetTitle()
                 self.activityIndicator.stopAnimating()
             }
         }
