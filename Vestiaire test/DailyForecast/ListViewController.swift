@@ -27,6 +27,10 @@ final class ListViewController: UIViewController {
 
 extension ListViewController: UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        "\(weatherData.daysCount)-days forecast"
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         weatherData.daySummaries.count
     }

@@ -14,16 +14,21 @@ struct GeneralDailyWeather {
     /// Country of specified city
     let countryName: String
     
+    /// Number of days in this forecast
+    let daysCount: Int
+    
     /// Summary data to represent each day
     let daySummaries: [DayWeatherSummary]
 }
 
 extension GeneralDailyWeather: RandomEntityGenerator {
     static var random: GeneralDailyWeather {
-        .init(
+        let daysCount = Int.random(in: 1...16)
+        return .init(
             cityName: "Tatooine",
             countryName: "Republic",
-            daySummaries: (1...16).map({ _ in DayWeatherSummary.random })
+            daysCount: daysCount,
+            daySummaries: (1...daysCount).map({ _ in DayWeatherSummary.random })
         )
     }
 }

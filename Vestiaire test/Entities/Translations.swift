@@ -33,6 +33,7 @@ struct Translations {
         .init(
             cityName: apiWeather.city.name,
             countryName: apiWeather.city.country,
+            daysCount: apiWeather.cnt,
             daySummaries: getWeatherSummary(from: apiWeather.list)
         )
     }
