@@ -1,6 +1,8 @@
 # Vestiaire-test
 Project to pass Vestiaire collective test task and land my dream job
 
+![180](https://user-images.githubusercontent.com/34598314/130511284-dbfc03c5-4071-4e36-97d7-16695cf980e5.png)
+
 ## Development process
 I've decided to use storyboard to speed up the process. I think, this is a good decision for project of this size
 
