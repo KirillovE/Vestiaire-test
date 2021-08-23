@@ -11,7 +11,7 @@ final class ListViewController: UIViewController {
     
     @IBOutlet weak var weatherTable: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    private var weatherData: GeneralDailyWeather?
+    private var weatherData: GeneralDailyWeather? // = .random
     private var interactor: Interactor?
     
     override func viewDidLoad() {
@@ -60,11 +60,25 @@ extension ListViewController: UITableViewDelegate {
 
 extension ListViewController: WeatherRepresenter {
     func showWeather(_ weather: GeneralDailyWeather) {
-        weatherData = weather
+        let deletionsIndexPaths = getIndexPaths(rowsCount: weatherData?.daysCount ?? 0)
+        let insertionsIndexPaths = getIndexPaths(rowsCount: weather.daysCount)
+        
         DispatchQueue.main.async {
-            self.activityIndicator.stopAnimating()
-            self.weatherTable.reloadData()
+            self.weatherTable.performBatchUpdates {
+                self.weatherTable.deleteRows(at: deletionsIndexPaths, with: .fade)
+                self.weatherData = weather
+                self.weatherTable.insertRows(at: insertionsIndexPaths, with: .automatic)
+            } completion: { _ in
+                self.weatherTable.reloadData()
+                self.activityIndicator.stopAnimating()
+            }
         }
+    }
+    
+    private func getIndexPaths(rowsCount: Int) -> [IndexPath] {
+        rowsCount <= 0
+            ? []
+            : (0...rowsCount-1).map { IndexPath(row: $0, section: 0) }
     }
 }
 
