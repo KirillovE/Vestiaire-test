@@ -8,6 +8,7 @@
 import Foundation
 import WeatherLoader
 
+/// Object that interacts with different services
 struct Interactor {
     
     private let loader: Loader
@@ -15,6 +16,10 @@ struct Interactor {
     private let weatherRepresenter: WeatherRepresenter
     private let errorRepresenter: ErrorRepresenter
     
+    /// Initialize object
+    /// - Parameters:
+    ///   - weatherRepresenter: Object that able to represent weather data
+    ///   - errorRepresenter: Object that able to represent error data
     init(
         weatherRepresenter: WeatherRepresenter,
         errorRepresenter: ErrorRepresenter
@@ -32,6 +37,7 @@ struct Interactor {
         self.errorRepresenter = errorRepresenter
     }
     
+    /// Load weather data from some storage
     func loadWeather() {
         loader.loadDailyForecast(for: "Paris", in: 16) { loadedResult in
             switch loadedResult {
@@ -44,4 +50,5 @@ struct Interactor {
             }
         }
     }
+    
 }

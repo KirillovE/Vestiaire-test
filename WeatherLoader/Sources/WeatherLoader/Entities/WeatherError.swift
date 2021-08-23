@@ -15,4 +15,5 @@ extension WeatherError: ExpressibleByStringLiteral {
     public init(stringLiteral value: String) {
         description = value
     }
+    
 }

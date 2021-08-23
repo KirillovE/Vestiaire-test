@@ -15,4 +15,5 @@ public struct GeoLocation: Decodable {
     
     /// Geo location, latitude
     public let lat: Double
+    
 }

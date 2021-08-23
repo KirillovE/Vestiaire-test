@@ -8,6 +8,7 @@
 import Foundation
 import WeatherLoader
 
+/// Translates entities from one library to another
 struct EntityTranslator {
     
     private let dateFormatter: DateFormatter = {
@@ -30,6 +31,9 @@ struct EntityTranslator {
         return formatter
     }()
     
+    /// Performs translation from weather API weather data to view data
+    /// - Parameter apiWeather: Weather data from API
+    /// - Returns: Weather view data
     func getGeneralWeather(from apiWeather: WeatherFields) -> GeneralDailyWeather {
         .init(
             cityName: apiWeather.city.name,
@@ -39,6 +43,8 @@ struct EntityTranslator {
         )
     }
 }
+
+// MARK: - Private
 
 private extension EntityTranslator {
     

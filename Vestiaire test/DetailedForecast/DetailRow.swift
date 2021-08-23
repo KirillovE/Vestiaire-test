@@ -9,9 +9,17 @@ import Foundation
 
 /// Representation of row in weather details table
 enum DetailRow: String, CaseIterable {
+    
+    /// **Overview** section
     case iconDescription, date, sunrise, sunset
+    
+    /// **Temperature** section
     case morning, day, evening, night
+    
+    /// **Feels like** section
     case morningFeels, dayFeels, eveningFeels, nightFeels
+    
+    /// **Conditions** section
     case wind, clouds, humidity, pop
     
     /// Count of rows in specific section
@@ -22,9 +30,13 @@ enum DetailRow: String, CaseIterable {
     static var rowsCounts: [Int] {
         [4, 4, 4, 4]
     }
+    
 }
 
 extension DetailRow {
+    
+    /// Initializes enumeration case associated with `IndexPath` object or fails is no association found
+    /// - Parameter indexPath: Specifies place of row in table
     init?(from indexPath: IndexPath) {
         switch indexPath {
         case .init(row: 0, section: 0):
@@ -63,4 +75,5 @@ extension DetailRow {
             return nil
         }
     }
+    
 }

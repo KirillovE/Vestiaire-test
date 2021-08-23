@@ -25,9 +25,13 @@ struct DayWeatherSummary {
     
     /// More details about weather
     let details: DayWeatherDetails
+    
 }
 
+// MARK: - RandomEntityGenerator
+
 extension DayWeatherSummary: RandomEntityGenerator {
+    
     static var random: DayWeatherSummary {
         .init(
             conditionsIconName: ["01d", "09n", "50d"].randomElement()!,
@@ -38,4 +42,5 @@ extension DayWeatherSummary: RandomEntityGenerator {
             details: .random
         )
     }
+    
 }

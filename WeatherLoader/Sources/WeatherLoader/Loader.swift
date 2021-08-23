@@ -44,6 +44,7 @@ public struct Loader {
 }
 
 // MARK: - Data transfer
+
 extension Loader {
     
     /// Load daily forecast from the server
@@ -83,7 +84,7 @@ extension Loader {
         return components?.url
     }
     
-    private func formTask(_ url: URL, _ completion: @escaping ForecastResponse) -> URLSessionDataTask {
+    func formTask(_ url: URL, _ completion: @escaping ForecastResponse) -> URLSessionDataTask {
         session.dataTask(with: url) { data, response, error in
             if let error = error {
                 let responseError = WeatherError(stringLiteral: error.localizedDescription)
@@ -122,6 +123,7 @@ extension Loader {
 }
 
 // MARK: - Auxiliary types
+
 public extension Loader {
     
     /// Data format

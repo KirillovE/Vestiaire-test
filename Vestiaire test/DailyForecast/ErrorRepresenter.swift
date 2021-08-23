@@ -11,4 +11,5 @@ protocol ErrorRepresenter {
     /// Show error to user
     /// - Parameter error: Error text to be shown
     func showError(_ error: String)
+    
 }

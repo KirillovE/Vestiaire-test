@@ -24,4 +24,5 @@ public struct City: Decodable {
     
     /// Shift in seconds from UTC
     public let timezone: Int
+    
 }

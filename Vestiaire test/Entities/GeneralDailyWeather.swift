@@ -19,9 +19,13 @@ struct GeneralDailyWeather {
     
     /// Summary data to represent each day
     let daySummaries: [DayWeatherSummary]
+    
 }
 
+// MARK: - RandomEntityGenerator
+
 extension GeneralDailyWeather: RandomEntityGenerator {
+    
     static var random: GeneralDailyWeather {
         let daysCount = Int.random(in: 1...16)
         return .init(
@@ -31,4 +35,5 @@ extension GeneralDailyWeather: RandomEntityGenerator {
             daySummaries: (1...daysCount).map({ _ in DayWeatherSummary.random })
         )
     }
+    
 }

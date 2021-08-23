@@ -29,4 +29,5 @@ public struct Temperature: Decodable {
     
     /// Night temperature. Unit: Celsius
     public let night: Double
+    
 }

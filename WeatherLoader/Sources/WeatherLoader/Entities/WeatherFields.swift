@@ -18,4 +18,5 @@ public struct WeatherFields: Decodable {
     
     /// List of daily weather forecast
     public let list: [DailyWeather]
+    
 }

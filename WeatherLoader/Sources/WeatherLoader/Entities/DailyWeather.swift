@@ -58,4 +58,5 @@ public struct DailyWeather: Decodable {
     
     /// Snow volume, mm
     public let snow: Double?
+    
 }

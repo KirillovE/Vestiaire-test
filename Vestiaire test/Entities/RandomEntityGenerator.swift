@@ -6,9 +6,13 @@
 //
 
 /// A type that can generate itself with random values
+///
+/// It is useful when testing UI without actual data
 protocol RandomEntityGenerator {
+    
     associatedtype T
     
     /// Entity initialized with random values
     static var random: T { get }
+
 }

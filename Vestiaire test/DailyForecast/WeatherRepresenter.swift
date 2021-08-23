@@ -11,4 +11,5 @@ protocol WeatherRepresenter {
     /// Show weather data to user
     /// - Parameter weather: Weather data to be shown
     func showWeather(_ weather: GeneralDailyWeather)
+    
 }

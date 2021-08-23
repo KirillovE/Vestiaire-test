@@ -11,7 +11,7 @@ final class ListViewController: UIViewController {
     
     @IBOutlet weak var weatherTable: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    private var weatherData: GeneralDailyWeather? // = .random // you can uncomment this assignement for testing purpose
+    private var weatherData: GeneralDailyWeather?
     private var interactor: Interactor?
     
     override func viewDidLoad() {
@@ -42,6 +42,8 @@ final class ListViewController: UIViewController {
     
 }
 
+// MARK: - UITableViewDataSource
+
 extension ListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -66,13 +68,21 @@ extension ListViewController: UITableViewDataSource {
     
 }
 
+// MARK: - UITableViewDelegate
+
 extension ListViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
 }
 
+
+// MARK: - WeatherRepresenter
+
 extension ListViewController: WeatherRepresenter {
+    
     func showWeather(_ weather: GeneralDailyWeather) {
         let deletionsIndexPaths = getIndexPaths(rowsCount: weatherData?.daysCount ?? 0)
         let insertionsIndexPaths = getIndexPaths(rowsCount: weather.daysCount)
@@ -95,9 +105,14 @@ extension ListViewController: WeatherRepresenter {
             ? []
             : (0...rowsCount-1).map { IndexPath(row: $0, section: 0) }
     }
+    
 }
 
+
+// MARK: - ErrorRepresenter
+
 extension ListViewController: ErrorRepresenter {
+    
     func showError(_ error: String) {
         DispatchQueue.main.async {
             let alertController = UIAlertController(
@@ -109,4 +124,5 @@ extension ListViewController: ErrorRepresenter {
             self.present(alertController, animated: true)
         }
     }
+
 }

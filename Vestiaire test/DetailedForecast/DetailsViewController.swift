@@ -8,15 +8,13 @@
 import UIKit
 
 final class DetailsViewController: UITableViewController {
-    
+
     @IBOutlet weak var detailsTableView: UITableView!
-    var weatherDetails: DayWeatherDetails? = .random
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
+    var weatherDetails: DayWeatherDetails?
+    
 }
+
+// MARK: - UITableViewDataSource
 
 extension DetailsViewController {
     

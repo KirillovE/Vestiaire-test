@@ -21,4 +21,5 @@ public struct Conditions: Decodable {
     
     /// Weather icon id
     public let icon: String
+    
 }
