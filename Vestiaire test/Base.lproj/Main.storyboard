@@ -82,7 +82,7 @@
                                             <outlet property="minTemperatureLabel" destination="AYx-zh-bl9" id="b2a-he-T5Z"/>
                                             <outlet property="weakdayLabel" destination="rec-y8-pP8" id="TqE-zW-PtB"/>
                                             <outlet property="weatherIconImageView" destination="XOW-Jt-diS" id="8W2-U3-HbU"/>
-                                            <segue destination="VBB-56-qge" kind="show" id="hMK-fE-0hd"/>
+                                            <segue destination="VBB-56-qge" kind="show" identifier="showDetails" id="hMK-fE-0hd"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -25,6 +25,17 @@ final class ListViewController: UIViewController {
         activityIndicator.startAnimating()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard
+            segue.identifier == "showDetails",
+            let detailsController = segue.destination as? DetailsViewController,
+            let selectedRow = weatherTable.indexPathForSelectedRow?.row,
+            let selectedData = weatherData?.daySummaries[selectedRow]
+        else { return }
+        
+        detailsController.weatherDetails = selectedData.details
+    }
+    
     private func seetTitle() {
         title = weatherData.map { $0.cityName + ", " + $0.countryName }
     }
