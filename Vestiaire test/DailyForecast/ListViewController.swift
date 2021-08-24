@@ -36,7 +36,7 @@ final class ListViewController: UIViewController {
         detailsController.weatherDetails = selectedData.details
     }
     
-    private func seetTitle() {
+    private func setTitle() {
         title = weatherData.map { $0.cityName + ", " + $0.countryName }
     }
     
@@ -84,26 +84,12 @@ extension ListViewController: UITableViewDelegate {
 extension ListViewController: WeatherRepresenter {
     
     func showWeather(_ weather: GeneralDailyWeather) {
-        let deletionsIndexPaths = getIndexPaths(rowsCount: weatherData?.daysCount ?? 0)
-        let insertionsIndexPaths = getIndexPaths(rowsCount: weather.daysCount)
-        
+        self.weatherData = weather
         DispatchQueue.main.async {
-            self.weatherTable.performBatchUpdates {
-                self.weatherTable.deleteRows(at: deletionsIndexPaths, with: .fade)
-                self.weatherData = weather
-                self.weatherTable.insertRows(at: insertionsIndexPaths, with: .automatic)
-            } completion: { _ in
-                self.weatherTable.reloadData()
-                self.seetTitle()
-                self.activityIndicator.stopAnimating()
-            }
+            self.weatherTable.reloadSections([0], with: .automatic)
+            self.setTitle()
+            self.activityIndicator.stopAnimating()
         }
-    }
-    
-    private func getIndexPaths(rowsCount: Int) -> [IndexPath] {
-        rowsCount <= 0
-            ? []
-            : (0...rowsCount-1).map { IndexPath(row: $0, section: 0) }
     }
     
 }
