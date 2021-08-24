@@ -38,7 +38,7 @@ extension DetailsViewController {
         switch row {
         case .iconDescription:
             cell.imageView?.image = UIImage(named: details.conditionIconName)
-            cell.textLabel?.text = details.conditionDescription
+            cell.textLabel?.text = details.conditionReachDescription
         case .date:
             cell.textLabel?.text = "Weather at \(details.date)"
         case .sunrise:

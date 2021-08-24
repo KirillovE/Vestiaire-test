@@ -27,6 +27,20 @@ struct DayWeatherDetails {
     // Feels like section data
     let feelsLike: Temperature
     
+    /// Description, enriched with more data
+    var conditionReachDescription: String {
+        let addition: String
+        switch temperature.day {
+        case _ where temperature.day < 10:
+            addition = "Cold" + ", "
+        case _ where temperature.day > 25:
+            addition = "Hot" + ", "
+        default:
+            addition = ""
+        }
+        
+        return addition + conditionDescription
+    }
 }
 
 // MARK: - RandomEntityGenerator
