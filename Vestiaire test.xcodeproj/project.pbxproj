@@ -18,6 +18,7 @@
 		7A17478626D2D7A000948613 /* EntityTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17478526D2D7A000948613 /* EntityTranslator.swift */; };
 		7A17478926D2D7A800948613 /* WeatherLoader in Frameworks */ = {isa = PBXBuildFile; productRef = 7A17478826D2D7A800948613 /* WeatherLoader */; };
 		7A17478B26D2E07B00948613 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A17478A26D2E07B00948613 /* Interactor.swift */; };
+		7A2ECB5626DFD62200DB8F6A /* Vestiaire_test_UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2ECB5526DFD62200DB8F6A /* Vestiaire_test_UnitTests.swift */; };
 		7AC1EE0A26D3FD0A00DAB9E5 /* WeatherRepresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1EE0926D3FD0900DAB9E5 /* WeatherRepresenter.swift */; };
 		7AC1EE0C26D4013800DAB9E5 /* ErrorRepresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC1EE0B26D4013800DAB9E5 /* ErrorRepresenter.swift */; };
 		7ACD955426D1178400A98134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD955326D1178400A98134 /* AppDelegate.swift */; };
@@ -26,6 +27,16 @@
 		7ACD955D26D1178500A98134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ACD955C26D1178500A98134 /* Assets.xcassets */; };
 		7ACD956026D1178500A98134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ACD955E26D1178500A98134 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7A2ECB5826DFD62200DB8F6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7ACD954826D1178400A98134 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7ACD954F26D1178400A98134;
+			remoteInfo = "Vestiaire test";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		7A17476126D281B900948613 /* GeneralDailyWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralDailyWeather.swift; sourceTree = "<group>"; };
@@ -38,6 +49,9 @@
 		7A17477626D2C00900948613 /* DetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRow.swift; sourceTree = "<group>"; };
 		7A17478526D2D7A000948613 /* EntityTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityTranslator.swift; sourceTree = "<group>"; };
 		7A17478A26D2E07B00948613 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		7A2ECB5326DFD62200DB8F6A /* Vestiaire test UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vestiaire test UnitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A2ECB5526DFD62200DB8F6A /* Vestiaire_test_UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vestiaire_test_UnitTests.swift; sourceTree = "<group>"; };
+		7A2ECB5726DFD62200DB8F6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AC1EE0926D3FD0900DAB9E5 /* WeatherRepresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepresenter.swift; sourceTree = "<group>"; };
 		7AC1EE0B26D4013800DAB9E5 /* ErrorRepresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorRepresenter.swift; sourceTree = "<group>"; };
 		7ACD955026D1178400A98134 /* Vestiaire test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vestiaire test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +65,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7A2ECB5026DFD62200DB8F6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7ACD954D26D1178400A98134 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -103,11 +124,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7A2ECB5426DFD62200DB8F6A /* Vestiaire test UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				7A2ECB5526DFD62200DB8F6A /* Vestiaire_test_UnitTests.swift */,
+				7A2ECB5726DFD62200DB8F6A /* Info.plist */,
+			);
+			path = "Vestiaire test UnitTests";
+			sourceTree = "<group>";
+		};
 		7ACD954726D1178400A98134 = {
 			isa = PBXGroup;
 			children = (
 				7ACD956726D134DF00A98134 /* WeatherLoader */,
 				7ACD955226D1178400A98134 /* Vestiaire test */,
+				7A2ECB5426DFD62200DB8F6A /* Vestiaire test UnitTests */,
 				7ACD955126D1178400A98134 /* Products */,
 				7A17478726D2D7A800948613 /* Frameworks */,
 			);
@@ -117,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				7ACD955026D1178400A98134 /* Vestiaire test.app */,
+				7A2ECB5326DFD62200DB8F6A /* Vestiaire test UnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,6 +171,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7A2ECB5226DFD62200DB8F6A /* Vestiaire test UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A2ECB5A26DFD62200DB8F6A /* Build configuration list for PBXNativeTarget "Vestiaire test UnitTests" */;
+			buildPhases = (
+				7A2ECB4F26DFD62200DB8F6A /* Sources */,
+				7A2ECB5026DFD62200DB8F6A /* Frameworks */,
+				7A2ECB5126DFD62200DB8F6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A2ECB5926DFD62200DB8F6A /* PBXTargetDependency */,
+			);
+			name = "Vestiaire test UnitTests";
+			productName = "Vestiaire test UnitTests";
+			productReference = 7A2ECB5326DFD62200DB8F6A /* Vestiaire test UnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7ACD954F26D1178400A98134 /* Vestiaire test */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7ACD956426D1178500A98134 /* Build configuration list for PBXNativeTarget "Vestiaire test" */;
@@ -168,6 +218,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					7A2ECB5226DFD62200DB8F6A = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 7ACD954F26D1178400A98134;
+					};
 					7ACD954F26D1178400A98134 = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -187,11 +241,19 @@
 			projectRoot = "";
 			targets = (
 				7ACD954F26D1178400A98134 /* Vestiaire test */,
+				7A2ECB5226DFD62200DB8F6A /* Vestiaire test UnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7A2ECB5126DFD62200DB8F6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7ACD954E26D1178400A98134 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -205,6 +267,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7A2ECB4F26DFD62200DB8F6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A2ECB5626DFD62200DB8F6A /* Vestiaire_test_UnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7ACD954C26D1178400A98134 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -228,6 +298,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		7A2ECB5926DFD62200DB8F6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7ACD954F26D1178400A98134 /* Vestiaire test */;
+			targetProxy = 7A2ECB5826DFD62200DB8F6A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		7ACD955926D1178400A98134 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -248,6 +326,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7A2ECB5B26DFD62200DB8F6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y8DV57JN42;
+				INFOPLIST_FILE = "Vestiaire test UnitTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.triada.Vestiaire-test-UnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vestiaire test.app/Vestiaire test";
+			};
+			name = Debug;
+		};
+		7A2ECB5C26DFD62200DB8F6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y8DV57JN42;
+				INFOPLIST_FILE = "Vestiaire test UnitTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.triada.Vestiaire-test-UnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vestiaire test.app/Vestiaire test";
+			};
+			name = Release;
+		};
 		7ACD956226D1178500A98134 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -407,6 +527,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7A2ECB5A26DFD62200DB8F6A /* Build configuration list for PBXNativeTarget "Vestiaire test UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A2ECB5B26DFD62200DB8F6A /* Debug */,
+				7A2ECB5C26DFD62200DB8F6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7ACD954B26D1178400A98134 /* Build configuration list for PBXProject "Vestiaire test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
