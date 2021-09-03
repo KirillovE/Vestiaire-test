@@ -11,7 +11,7 @@ import Foundation
 public struct Loader {
     
     /// Response of forecast network request
-    public typealias ForecastResponse = (Result<WeatherFields, WeatherError>) -> ()
+    public typealias ForecastResponse = (Result<WeatherFields, TextualError>) -> ()
     
     /// Identifier associated with your application
     public let appID: String
@@ -87,7 +87,7 @@ extension Loader {
     func formTask(_ url: URL, _ completion: @escaping ForecastResponse) -> URLSessionDataTask {
         session.dataTask(with: url) { data, response, error in
             if let error = error {
-                let responseError = WeatherError(stringLiteral: error.localizedDescription)
+                let responseError = TextualError(stringLiteral: error.localizedDescription)
                 completion(.failure(responseError))
                 return
             }
@@ -96,7 +96,7 @@ extension Loader {
                 let httpResponse = response as? HTTPURLResponse,
                 (200...299).contains(httpResponse.statusCode)
             else {
-                let serverError = WeatherError(description: response.debugDescription)
+                let serverError = TextualError(description: response.debugDescription)
                 completion(.failure(serverError))
                 return
             }
@@ -114,7 +114,7 @@ extension Loader {
                 let weather = try decoder.decode(WeatherFields.self, from: data)
                 completion(.success(weather))
             } catch let decodingError {
-                let decodingErrorText = WeatherError(description: decodingError.localizedDescription)
+                let decodingErrorText = TextualError(description: decodingError.localizedDescription)
                 completion(.failure(decodingErrorText))
             }
         }

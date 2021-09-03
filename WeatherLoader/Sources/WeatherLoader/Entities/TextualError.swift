@@ -1,16 +1,16 @@
 //
-//  WeatherError.swift
+//  TextualError.swift
 //  
 //
 //  Created by Евгений Кириллов on 21.08.2021.
 //
 
-/// API error representation
-public struct WeatherError: Error, CustomStringConvertible {
+/// Textual error representation
+public struct TextualError: Error, CustomStringConvertible {
     public let description: String
 }
 
-extension WeatherError: ExpressibleByStringLiteral {
+extension TextualError: ExpressibleByStringLiteral {
     
     public init(stringLiteral value: String) {
         description = value
