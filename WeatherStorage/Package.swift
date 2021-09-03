@@ -11,14 +11,14 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/realm/realm-cocoa.git", "10.13.0"..<"11.0.0"),
+        .package(name: "Realm", url: "https://github.com/realm/realm-cocoa.git", "10.13.0"..<"11.0.0"),
     ],
     targets: [
         .target(
             name: "WeatherStorage",
             dependencies: [
-//                "Realm",
-//                "RealmSwift"
+                .product(name: "Realm", package: "Realm"),
+                .product(name: "RealmSwift", package: "Realm")
             ]
         ),
         .testTarget(
