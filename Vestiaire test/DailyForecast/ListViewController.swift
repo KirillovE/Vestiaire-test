@@ -28,12 +28,12 @@ final class ListViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard
             segue.identifier == "showDetails",
-            let detailsController = segue.destination as? DetailsViewController,
+            let weatherRepresenter = segue.destination as? WeatherDetailsRepresenter,
             let selectedRow = weatherTable.indexPathForSelectedRow?.row,
             let selectedData = weatherData?.daySummaries[selectedRow]
         else { return }
         
-        detailsController.weatherDetails = selectedData.details
+        weatherRepresenter.showDetails(selectedData.details)
     }
     
     private func setTitle() {

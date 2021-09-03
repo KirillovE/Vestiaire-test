@@ -10,7 +10,20 @@ import UIKit
 final class DetailsViewController: UITableViewController {
 
     @IBOutlet weak var detailsTableView: UITableView!
-    var weatherDetails: DayWeatherDetails?
+    private var weatherDetails: DayWeatherDetails?
+    
+}
+
+// MARK: - WeatherDetailsRepresenter
+
+extension DetailsViewController: WeatherDetailsRepresenter {
+    
+    func showDetails(_ weatherDetails: DayWeatherDetails) {
+        self.weatherDetails = weatherDetails
+        DispatchQueue.main.async {
+            self.tableView.reloadSections([0], with: .automatic)
+        }
+    }
     
 }
 
