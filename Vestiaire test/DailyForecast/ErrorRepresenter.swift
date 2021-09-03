@@ -6,7 +6,7 @@
 //
 
 /// A type that able to represent error text somehow
-protocol ErrorRepresenter {
+protocol ErrorRepresenter: AnyObject {
     
     /// Show error to user
     /// - Parameter error: Error text to be shown

@@ -6,7 +6,7 @@
 //
 
 /// A type that able to represent weather data somehow
-protocol WeatherRepresenter {
+protocol WeatherRepresenter: AnyObject {
     
     /// Show weather data to user
     /// - Parameter weather: Weather data to be shown

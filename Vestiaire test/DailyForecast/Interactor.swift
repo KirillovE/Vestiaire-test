@@ -13,8 +13,8 @@ struct Interactor {
     
     private let loader: Loader
     private let translator = EntityTranslator()
-    private let weatherRepresenter: WeatherRepresenter
-    private let errorRepresenter: ErrorRepresenter
+    private weak var weatherRepresenter: WeatherRepresenter?
+    private weak var errorRepresenter: ErrorRepresenter?
     
     /// Initialize object
     /// - Parameters:
@@ -43,10 +43,10 @@ struct Interactor {
             switch loadedResult {
             case .success(let forecast):
                 let presentableForecast = translator.getGeneralWeather(from: forecast)
-                weatherRepresenter.showWeather(presentableForecast)
+                weatherRepresenter?.showWeather(presentableForecast)
             case .failure(let error):
                 let errorText = String(describing: error)
-                errorRepresenter.showError(errorText)
+                errorRepresenter?.showError(errorText)
             }
         }
     }
