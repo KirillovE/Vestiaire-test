@@ -42,6 +42,10 @@ final class NetworkingTests: XCTestCase {
         XCTAssertEqual(queryParameters["cnt"], "1")
     }
     
+    func testDataDecoding() {
+        let result = loader?.decodeLoadedData(APIResponses.full.data!)
+        XCTAssertNoThrow(try result?.get())
+    }
     
 }
 
