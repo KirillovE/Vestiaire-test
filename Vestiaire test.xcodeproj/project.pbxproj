@@ -54,6 +54,7 @@
 		7A2ECB5526DFD62200DB8F6A /* Vestiaire_test_UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vestiaire_test_UnitTests.swift; sourceTree = "<group>"; };
 		7A2ECB5726DFD62200DB8F6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A3A08F126E226E10093981A /* WeatherDetailsRepresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsRepresenter.swift; sourceTree = "<group>"; };
+		7A3A08F326E22A440093981A /* WeatherStorage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WeatherStorage; sourceTree = "<group>"; };
 		7AC1EE0926D3FD0900DAB9E5 /* WeatherRepresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRepresenter.swift; sourceTree = "<group>"; };
 		7AC1EE0B26D4013800DAB9E5 /* ErrorRepresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorRepresenter.swift; sourceTree = "<group>"; };
 		7ACD955026D1178400A98134 /* Vestiaire test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vestiaire test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +140,7 @@
 		7ACD954726D1178400A98134 = {
 			isa = PBXGroup;
 			children = (
+				7A3A08F326E22A440093981A /* WeatherStorage */,
 				7ACD956726D134DF00A98134 /* WeatherLoader */,
 				7ACD955226D1178400A98134 /* Vestiaire test */,
 				7A2ECB5426DFD62200DB8F6A /* Vestiaire test UnitTests */,
@@ -239,6 +241,8 @@
 				Base,
 			);
 			mainGroup = 7ACD954726D1178400A98134;
+			packageReferences = (
+			);
 			productRefGroup = 7ACD955126D1178400A98134 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
