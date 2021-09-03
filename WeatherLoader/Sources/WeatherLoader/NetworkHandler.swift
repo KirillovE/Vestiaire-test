@@ -1,5 +1,5 @@
 //
-//  Networking.swift
+//  NetworkHandler.swift
 //  
 //
 //  Created by Евгений Кириллов on 03.09.2021.
@@ -8,7 +8,7 @@
 import Foundation
 
 /// Networking layer to load some data from server API
-struct Networking {
+struct NetworkHandler {
     typealias GeneralResponse = (Result<Data, TextualError>) -> ()
     private let session: URLSession
     

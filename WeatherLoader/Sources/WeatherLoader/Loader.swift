@@ -27,7 +27,7 @@ public struct Loader {
     // MARK: Private properties
     
     private let endpoint = "https://api.openweathermap.org/data/2.5/forecast/daily"
-    private let networking = Networking()
+    private let networkHandler = NetworkHandler()
     private let decoder: JSONDecoder = {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
@@ -64,7 +64,7 @@ public struct Loader {
             return
         }
         
-        let task = networking.loadDataFromURL(url) { result in
+        let task = networkHandler.loadDataFromURL(url) { result in
             let forecastResult = result.flatMap(decodeLoadedData)
             completion(forecastResult)
         }
