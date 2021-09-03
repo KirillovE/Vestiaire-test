@@ -10,6 +10,8 @@ import Foundation
 /// An object that handles requests to OpenWeather API
 public struct Loader {
     
+    // MARK: Public properties
+    
     /// Response of forecast network request
     public typealias ForecastResponse = (Result<WeatherFields, TextualError>) -> ()
     
@@ -22,13 +24,17 @@ public struct Loader {
     /// Units of measurement
     public let units: Units
     
+    // MARK: Private properties
+    
     private let endpoint = "https://api.openweathermap.org/data/2.5/forecast/daily"
-    private let session = URLSession.shared
+    private let networking = Networking()
     private let decoder: JSONDecoder = {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         return decoder
     }()
+    
+    // MARK: Public methods
     
     /// Generate a new instanse explicitly setting properties
     /// - Parameters:
@@ -40,12 +46,6 @@ public struct Loader {
         self.mode = mode
         self.units = units
     }
-    
-}
-
-// MARK: - Data transfer
-
-extension Loader {
     
     /// Load daily forecast from the server
     ///
@@ -64,8 +64,19 @@ extension Loader {
             return
         }
         
-        formTask(url, completion).resume()
+        let task = networking.loadDataFromURL(url) { result in
+            let forecastResult = result.flatMap(decodeLoadedData)
+            completion(forecastResult)
+        }
+        
+        task.resume()
     }
+    
+}
+
+// MARK: - Helper methods
+
+extension Loader {
     
     func formURL(_ days: Int, _ city: String) -> URL? {
         let normalizationRange = 1...16
@@ -84,39 +95,13 @@ extension Loader {
         return components?.url
     }
     
-    func formTask(_ url: URL, _ completion: @escaping ForecastResponse) -> URLSessionDataTask {
-        session.dataTask(with: url) { data, response, error in
-            if let error = error {
-                let responseError = TextualError(stringLiteral: error.localizedDescription)
-                completion(.failure(responseError))
-                return
-            }
-            
-            guard
-                let httpResponse = response as? HTTPURLResponse,
-                (200...299).contains(httpResponse.statusCode)
-            else {
-                let serverError = TextualError(description: response.debugDescription)
-                completion(.failure(serverError))
-                return
-            }
-            
-            guard
-                let mimeType = httpResponse.mimeType,
-                mimeType == "application/json",
-                let data = data
-            else {
-                completion(.failure("Invalid response format"))
-                return
-            }
-            
-            do {
-                let weather = try decoder.decode(WeatherFields.self, from: data)
-                completion(.success(weather))
-            } catch let decodingError {
-                let decodingErrorText = TextualError(description: decodingError.localizedDescription)
-                completion(.failure(decodingErrorText))
-            }
+    func decodeLoadedData(_ data: Data) -> Result<WeatherFields, TextualError> {
+        do {
+            let weather = try decoder.decode(WeatherFields.self, from: data)
+            return .success(weather)
+        } catch let decodingError {
+            let decodingErrorText = TextualError(description: decodingError.localizedDescription)
+            return .failure(decodingErrorText)
         }
     }
     
